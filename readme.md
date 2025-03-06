@@ -12,16 +12,22 @@ To get it working simply add the plugin to your gui and then publish `Strings` o
 ![image0](images/simple_message.png)
 
 ## Customization
-A part of the message can be bold, to do so you have to get the workd within `//` markers :
-ign topic -t /echo_snackbar -m ignition.msgs.StringMsg -p 'data: "//hello_node// : from Ignition"'
+A part of the message can be bold, to do so you have to get the workd within `//` markers : 
+    
+    ign topic -t /echo_snackbar -m ignition.msgs.StringMsg -p 'data: "//hello_node// : from Ignition"'
+
 ![image1](images/bold_message.png)
 
-The messages can also be displayed in color (only the plugin gui has RichText formatting, the SnackBar doesn't), example for error messages in red : 
-ign topic -t /echo_snackbar -m ignition.msgs.StringMsg -p 'data: "<red>//BT_node// : Checks failed."'
+The messages can also be displayed in color (only the plugin gui has RichText formatting, the SnackBar doesn't), example for error messages in red :  
+
+    ign topic -t /echo_snackbar -m ignition.msgs.StringMsg -p 'data: "<red>//BT_node// : Checks failed."'
+
 ![image2](images/error_message.png)
 
-The display time of the message is also a parameter, use this : `--duration:=1000` for a duration a 1000ms for example (default value=4000).
-ign topic -t /echo_snackbar -m ignition.msgs.StringMsg -p 'data: "<green>//sensor_node// : bringup ok --duration:=1000"'
+The display time of the message is also a parameter, use this : `--duration:=1000` for a duration a 1000ms for example (default value=4000):  
+
+    ign topic -t /echo_snackbar -m ignition.msgs.StringMsg -p 'data: "<green>//sensor_node// : bringup ok --duration:=1000"'
+    
 ![image3](images/ok_message.png)
 
 The following colors can be used in messages:
